@@ -2,7 +2,32 @@
 
 用于管理 Flow 批量生图队列。适用于 Windows 10 / 11 x64，可免登录 GitHub 下载。
 
-**[下载 3.6.1 完整版 ZIP](https://github.com/luofucheng497-dotcom/workbench-updates/releases/download/v3.6.1/workbench-3.6.1-windows-x64.zip)** · [3.6.1 发布页](https://github.com/luofucheng497-dotcom/workbench-updates/releases/tag/v3.6.1) · [所有版本](https://github.com/luofucheng497-dotcom/workbench-updates/releases)
+**[下载 3.7.0 完整版 ZIP](https://github.com/luofucheng497-dotcom/workbench-updates/releases/download/v3.7.0/workbench-3.7.0-windows-x64.zip)** · [3.7.0 发布页](https://github.com/luofucheng497-dotcom/workbench-updates/releases/tag/v3.7.0) · [所有版本](https://github.com/luofucheng497-dotcom/workbench-updates/releases)
 
-- **首次使用**　完整解压 ZIP，双击文件夹里的 `批量工作台.exe`，保留同目录的“程序资源”。
-- **已有工作台**　已接入正式更新的 3.6.0 会在打开后后台检查，空闲时自动升级。仍使用 3.5.2 的用户可在“部署与迁移”中点“校验并升级 ZIP”，选择上面的完整包，沿用原来的安装位置和队列。
+- **首次使用**　完整解压 ZIP，双击文件夹里的 `批量工作台.exe`，保留同目录的“程序资源”。按包内指引连接 Chrome 扩展。
+- **已有工作台**　已接入本仓库正式通道的 3.6.0 和 3.6.1 打开后会检查更新，空闲时自动升级。也可从「部署与迁移 → 检查更新」手动检查。
+- **手动升级**　使用 3.5.2，或遇到在线更新暂缓时，可从「部署与迁移 → 校验并升级 ZIP」选择上面的完整包，沿用原安装位置和队列。
+
+## 3.7.0 更新说明
+
+### 新增
+
+- 新增 Flow 多账号运行页。可为各账号独立排队，设置并行数、单账号及全队列的新增图片上限。
+- 新增分镜项目预演。不同分镜分配独立项目，同一分镜跨批可接续原账号、项目和工作页。
+- 新增按账号轮休交接和「让出前台」。已受理的任务可在原项目继续核对。
+
+### 优化
+
+- 参考图支持标注角色、调整顺序和按内容摘要重新定位。缺图补做沿用原分镜工作页。
+- 悬浮窗显示实际运行模式、前台占用、待成图账号和切换原因。前台多账号模式遇到持续操作异常时可切到轮休。
+- 保留旧版「批次队列 → 开始 / 继续队列」入口。升级保留原队列、账号绑定、参考图顺序和断点。
+
+### 修复
+
+- 改进窗口焦点检查。降低并行数或撤选账号后，已派发任务留在原项目核对。
+- 改进断线和重启后的回执与成图核对。回执不明的条目保留待核对，迟到图按原提交关联，减少重复发送。
+
+### 已知限制
+
+- 最小化后台仍为实验模式。需要稳定运行时可选兼容前台或轮休，Flow 提示限制时会停发并保留断点。
+- 100 张实网放量仍待验收。实际并行能力取决于账号状态、设备和 Flow 服务。
